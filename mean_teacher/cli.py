@@ -86,7 +86,7 @@ def create_parser():
                         help='use pre-trained model')
     parser.add_argument('--gpu-id', type=str, default='0',
                         help='gpu id')
-    parser.add_argument('--dfs-k', type=int, default=10,
+    parser.add_argument('--dfs-k', type=int, default=50,
                         help='diffusion k')
     parser.add_argument('--fully-supervised', default=False, type=str2bool, metavar='BOOL',
                         help='is fully-supervised')
