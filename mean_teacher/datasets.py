@@ -42,7 +42,7 @@ def whalepassports(isTwice=True):
         transforms.Normalize(**channel_stats)
     ])
 
-    data_dir = 'data-local/images/whalepassports'
+    data_dir = 'right-whale-LP-DeepSSL/data-local/images/whalepassports'
 
     print("Using whale-passports from", data_dir)
 
