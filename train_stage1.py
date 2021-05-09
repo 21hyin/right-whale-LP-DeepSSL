@@ -63,7 +63,6 @@ def main():
     dataset_config = datasets.__dict__[args.dataset](isTwice=args.isMT)
     num_classes = dataset_config.pop('num_classes')
     train_loader, eval_loader, _, _ = create_data_loaders(**dataset_config, args=args)
-    # train_loader, eval_loader, _, _ = create_data_loaders(dataset_config.pop('datadir'), args=args)
 
     # Create the model
     model = create_model(num_classes,args)
