@@ -368,7 +368,7 @@ def extract_features(train_loader,model, isMT = False):
 
 def load_args(args, isMT = False):
 
-    label_dir = '/content/drive/MyDrive/COMP152-04_mini_project/LP-DeepSSL/data-local'
+    label_dir = 'data-local'
 
     if args.dataset == "cifar100":
         args.batch_size = 128
