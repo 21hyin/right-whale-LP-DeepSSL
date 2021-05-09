@@ -7,6 +7,8 @@
 #
 # Changes were made by 
 # Authors: A. Iscen, G. Tolias, Y. Avrithis, O. Chum. 2018.
+#
+# Minor changes made by GitHub user 21hyin
 
 import torchvision.transforms as transforms
 
@@ -40,7 +42,7 @@ def whalepassports(isTwice=True):
         transforms.Normalize(**channel_stats)
     ])
 
-    data_dir = '/content/drive/MyDrive/COMP152-04_mini_project/LP-DeepSSL/data-local/images/whalepassports'
+    data_dir = 'data-local/images/whalepassports'
 
     print("Using whale-passports from", data_dir)
 
