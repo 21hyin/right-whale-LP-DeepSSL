@@ -7,6 +7,8 @@
 #
 # Changes were made by 
 # Authors: A. Iscen, G. Tolias, Y. Avrithis, O. Chum. 2018.
+#
+# Minor changes made by GitHub user 21hyin
 
 import re
 import argparse
