@@ -1,4 +1,6 @@
 # Authors: A. Iscen, G. Tolias, Y. Avrithis, O. Chum. 2018.
+#
+# Minor changes made by GitHub user 21hyin
 
 import torch.utils.data as data
 
