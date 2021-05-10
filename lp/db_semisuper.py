@@ -332,9 +332,12 @@ class DBSS(DatasetFolder):
         weights = weights / np.max(weights)
         p_labels = np.argmax(probs_l1,1)
 
-        # Compute the accuracy of pseudolabels for statistical purposes
-        # correct_idx = (p_labels == labels)
-        # acc = correct_idx.mean()
+        # Compute the accuracy of pseudolabels for statistical purposes, if possible
+        acc = -1
+        if len(p_labels) == len(labels):
+            correct_idx = (p_labels == labels)
+            acc = correct_idx.mean()
+            assert acc >= 0
 
         p_labels[labeled_idx] = labels[labeled_idx]
         weights[labeled_idx] = 1.0
@@ -346,3 +349,5 @@ class DBSS(DatasetFolder):
         for i in range(len(self.classes)):
             cur_idx = np.where(np.asarray(self.p_labels) == i)[0]
             self.class_weights[i] = (float(labels.shape[0]) / len(self.classes)) / cur_idx.size
+        
+        return acc
