@@ -103,8 +103,8 @@ def main():
         # Extract features and update the pseudolabels
         print('Extracting features...')
         feats,labels = extract_features(train_loader_noshuff, model, isMT = args.isMT)
-        train_data.update_plabels(feats, k = args.dfs_k, max_iter = 20)
-        # print('selection accuracy: %.2f' % (sel_acc))
+        if sel_acc != -1:
+            print('selection accuracy: %.2f' % (sel_acc))
         
         #  Train for one epoch with the new pseudolabels
         if args.isMT:
