@@ -334,7 +334,7 @@ class DBSS(DatasetFolder):
 
         # Compute the accuracy of pseudolabels for statistical purposes, if possible
         acc = -1
-        if len(p_labels) == len(labels):
+        if -1 not in labels:
             correct_idx = (p_labels == labels)
             acc = correct_idx.mean()
             assert acc >= 0
