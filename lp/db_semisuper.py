@@ -269,7 +269,7 @@ class DBSS(DatasetFolder):
 
         self.images_lists = [[] for i in range(len(self.classes))]
 
-    def update_plabels(self, X, k = 10, max_iter = 20):
+    def update_plabels(self, X, k = 50, max_iter = 20):
 
         print('Updating pseudo-labels...')
         alpha = 0.99
